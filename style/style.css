@@ -22,10 +22,11 @@ header {
     font-size: 20px;
 }
 
-/* body:has(.dark:checked) {
+body:has(.dark:checked) {
     background-color: #0b1320;
     color: #f8fafc;
-} */
+}
+
 header a:hover {
     color: white;
 }
@@ -33,9 +34,10 @@ header a:hover {
 header a:active {
     color: white;
 }
-::selection{
+
+::selection {
     background-color: rgb(216, 179, 72);
-    color: rgb(10, 26, 47);;
+    color: rgb(10, 26, 47);
 }
 
 .prmids {
