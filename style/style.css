@@ -22,6 +22,11 @@ header {
     font-size: 20px;
 }
 
+/* body:has(.dark:checked) {
+    background-color: #0b1320;
+    color: #f8fafc;
+} */
+
 .prmids {
     max-width: 85px;
     cursor: pointer;
@@ -44,6 +49,11 @@ header a {
     border-radius: 10px;
     padding: 6px 16px;
 }
+
+header a:hover {
+    color: white;
+}
+
 
 nav {
     background-image: url(../img/nav.webp);
