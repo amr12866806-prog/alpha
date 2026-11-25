@@ -28,6 +28,7 @@ header a {
     color: rgb(10, 26, 47);
     border-radius: 10px;
     padding: 6px 16px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 header a:hover,
