@@ -22,10 +22,15 @@ header {
     font-size: 20px;
 }
 
-header a:hover {
-    color: white;
+header a {
+    text-decoration: none;
+    background-color: rgb(216, 179, 72);
+    color: rgb(10, 26, 47);
+    border-radius: 10px;
+    padding: 6px 16px;
 }
 
+header a:hover,
 header a:active {
     color: white;
 }
