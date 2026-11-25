@@ -26,6 +26,13 @@ header {
     background-color: #0b1320;
     color: #f8fafc;
 } */
+header a:hover {
+    color: white;
+}
+
+header a:active {
+    color: white;
+}
 
 .prmids {
     max-width: 85px;
