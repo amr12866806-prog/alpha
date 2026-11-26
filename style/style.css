@@ -3,99 +3,138 @@
     margin: 0;
     padding: 0;
     font-family: "Cairo", sans-serif;
+    caret-color: rgb(216, 179, 72);
 }
 
 body {
-    background-color: RGB(251, 240, 221);
+    background-color: antiquewhite;
+}
+
+:root {
+    --minColor: rgb(10, 26, 47);
+    --fontColor: rgb(216, 179, 72);
+}
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "head head head head head head head head head head"
+        "nav nav nav nav nav nav nav nav nav nav"
+        "section section section section section section section section section section"
+        "footer footer footer footer footer footer footer footer footer footer";
+}
+
+header div .logo {
+    max-width: 85px;
+    height: auto;
 }
 
 header {
-    background-color: rgb(10, 26, 47);
-    max-height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    color: rgb(216, 179, 72);
-    padding: 10px clamp(16px, 4vw, 64px);
-    font-size: 20px;
-}
-
-header a {
-    text-decoration: none;
-    background-color: rgb(216, 179, 72);
-    color: rgb(10, 26, 47);
-    border-radius: 10px;
-    padding: 6px 16px;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
-}
-
-header a:hover,
-header a:active {
-    color: white;
-}
-
-::selection {
-    background-color: rgb(216, 179, 72);
-    color: rgb(10, 26, 47);
-}
-
-.prmids {
-    max-width: 85px;
-    cursor: pointer;
+    grid-area: head;
+    background-color: var(--minColor);
+    color: var(--fontColor);
+    color: var(--fontColor);
+    width: 100%;
 }
 
 header div {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    flex-direction: row;
+    padding: 10px;
 }
 
-header span {
-    cursor: pointer;
-}
-
-header a {
-    text-decoration: none;
-    background-color: rgb(216, 179, 72);
-    color: rgb(10, 26, 47);
-    border-radius: 10px;
-    padding: 6px 16px;
-}
-
-header a:hover {
-    color: white;
-}
 
 
 nav {
+    grid-area: nav;
+    background-color: var(--minColor);
     background-image: url(../img/nav.webp);
+    color: white;
+    min-height: 300px;
+    padding: 20px 16px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: white;
-    min-height: clamp(280px, 50vh, 550px);
-    flex-wrap: wrap;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-nav p {
-    font-size: clamp(28px, 5vw, 56px);
-    text-align: center;
-    padding-inline: 16px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 5px clamp(16px, 4vw, 64px);
-        font-size: 14px;
+nav span {
+    text-shadow: 0 0 10px var(--minColor);
+    font-size: clamp(14px, 5vw, 56px);
+}
+
+nav input {
+    border-radius: 12px;
+    border: none;
+    width: 90%;
+    max-width: 450px;
+    padding: 10px 40px;
+}
+
+section div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+.img {
+    border-color: var(--fontColor);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section img {
+    width: 300px;
+    min-width: 85px;
+    
+}
+
+section {
+    grid-area: section;
+    color: var(--minColor);
+    padding: 20px;
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--minColor);
+    color: var(--fontColor);
+    min-height: 10rem;
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+    nav {
+        min-height: 170px;
     }
 
-    .prmids {
-        max-width: 65px;
+    section div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img {
+        display: flex;
+        flex-direction: row;
     }
 }
